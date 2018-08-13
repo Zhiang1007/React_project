@@ -1,27 +1,22 @@
-/*
-能发送ajax请求的函数模块
-函数的返回值是promise对象
- */
+//*使用axios封装的ajax请求函数函数返回的是promise对象*/
+
 import axios from 'axios'
-const baseUrl = ''
-// const baseUrl = 'http://localhost:4000'
-export default function ajax(url, data={}, type='GET') {
-  url = baseUrl + url
-  if(type==='GET') { // 发送GET请求
-    // 拼请求参数串
-    // data: {username: tom, password: 123}
-    // paramStr: username=tom&password=123
-    let paramStr = ''
-    Object.keys(data).forEach(key => {
-      paramStr += key + '=' + data[key] + '&'
-    })
-    if(paramStr) {
-      paramStr = paramStr.substring(0, paramStr.length-1)
+
+export default function ajax(url = '', data = {}, type = 'GET') {
+    if (type === 'GET') {
+        // 准备url query参数数据
+        let dataStr = '' //数据拼接字符串
+        Object.keys(data).forEach(key => {
+            dataStr += key + '=' + data[key] + '&'
+        })
+        if (dataStr !== '') {
+            dataStr = dataStr.substring(0, dataStr.lastIndexOf('&'))
+            url = url + '?' + dataStr
+        }
+        // 发送get请求
+        return axios.get(url)
+    } else {
+        // 发送post请求
+        return axios.post(url, data)  // data: 包含请求体数据的对象
     }
-    // 使用axios发get请求
-    return axios.get(url + '?' + paramStr)
-  } else {// 发送POST请求
-    // 使用axios发post请求
-    return axios.post(url, data)
-  }
 }

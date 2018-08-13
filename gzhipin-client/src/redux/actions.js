@@ -83,7 +83,7 @@ const receiveMsg = (chatMsg, userid) => ({type: RECEIVE_MSG, data: {chatMsg, use
 const msgRead = ({count, from, to}) => ({type: MSG_READ, data: {count, from, to}})
 
 // 注册异步action
-export const register = (user) => {
+export const reqRegister = (user) => {
   const {username, password, password2, type} = user
   // 做表单的前台检查, 如果不通过, 返回一个errorMsg的同步action
   if(!username) {

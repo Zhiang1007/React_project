@@ -15,7 +15,7 @@ import {
 import {connect} from 'react-redux'
 import {Redirect} from 'react-router-dom'
 
-import {register} from '../../redux/actions'
+import {reqRegister} from '../../redux/actions'
 import Logo from '../../components/logo/logo'
 
 const ListItem = List.Item
@@ -31,7 +31,7 @@ class Register extends Component {
   // 点击注册调用
   register = () => {
     //console.log(this.state)
-    this.props.register(this.state)
+    this.props.reqRegister(this.state)
   }
 
   // 处理输入数据的改变: 更新对应的状态

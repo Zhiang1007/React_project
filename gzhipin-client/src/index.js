@@ -6,10 +6,12 @@ import ReactDOM from 'react-dom'
 import {HashRouter, Switch, Route} from 'react-router-dom'
 import {Provider} from 'react-redux'
 
-import Login from './container/login/login'
-import Register from './container/register/register'
-import Main from './container/main/main'
+import Login from './containers/login/login'
+import Register from './containers/register/register'
+import Main from './containers/main/main'
 import store from './redux/store'
+
+import  './assets/css/index.less'
 
 // 渲染组件标签到页面
 ReactDOM.render((

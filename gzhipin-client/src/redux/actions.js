@@ -4,18 +4,15 @@
 
 import {
     AUTH_SUCCESS,
-    ERROR_MSG
+    ERROR_MSG,
+    RECEIVE_USER,
+    RESET_USER
 } from './action-types'
 import {
     reqRegister,
-    reqLogin
+    reqLogin,
+    reqUpdateUser
 } from '../api'
-
-
-// 同步错误消息
-const errorMsg = (msg) => ({type:ERROR_MSG, data: msg})
-// 同步成功响应
-const authSuccess = (user) => ({type: AUTH_SUCCESS, data: user})
 
 /*
 异步注册
@@ -61,7 +58,6 @@ export const login = ({username, password}) => {
         }
     }
 }
-
 
 
 

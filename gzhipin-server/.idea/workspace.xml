@@ -74,6 +74,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -85,7 +86,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -132,11 +132,13 @@
       <workItem from="1534141887420" duration="2264000" />
       <workItem from="1534149280469" duration="2993000" />
       <workItem from="1534157742376" duration="920000" />
+      <workItem from="1534750847499" duration="4000" />
+      <workItem from="1534750864221" duration="4000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9856000" />
+    <option name="totallyTimeSpent" value="9864000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
